@@ -1,0 +1,10 @@
+{% extends "blog/base.html" %}
+{% block content %}
+        <small><font color="red">You have been logged out!</font></small>
+        <div class="border-top pt-3">
+           <small class="text-muted">
+               <a href="{% url 'login'%}">Log In Again <i class="fas fa-sign-in-alt"></i></a>
+           </small>
+        </div>
+
+{% endblock content %}
