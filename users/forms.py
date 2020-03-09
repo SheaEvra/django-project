@@ -18,7 +18,7 @@ class RegisterForm(forms.ModelForm):
 
     class Meta:
         model = Profile
-        fields = ['phone_num', 'voters_card_num','constituancy','image']
+        fields = ['image']
 
 class UserUpdateForm(forms.ModelForm):
    # email = forms.EmailField
