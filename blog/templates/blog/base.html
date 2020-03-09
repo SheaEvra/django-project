@@ -79,11 +79,15 @@
     </div>
   </nav>
 
-{% block content2 %}
-
-  {% endblock content2 %}
+{% block content2 %}  {% endblock content2 %}
 {% endblock content1 %}
-
+        {% if messages %}
+            {% for message in messages %}
+              <div class="alert alert-{{ message.tags }}">
+                {{ message }}
+              </div>
+            {% endfor %}
+          {% endif %}
       <div class="jumbotron p-3 p-md-5 text-green rounded bg-#d8dce3">
 
           {% block content %}{% endblock %}

@@ -7,16 +7,17 @@ from .forms import UserRegisterForm, RegisterForm, UserUpdateForm, ProfileUpdate
 def register(request):
     if request.method == 'POST':
         form = UserRegisterForm(request.POST)
-        if form.is_valid():
+        i_form = RegisterForm(request.POST)
+        if form.is_valid() and i_form.is_valid():
             form.save()
+            i_form.save()
             messages.success(request, f'Account has been created! you can now login')
             return redirect('login')
 
     else:
         form = UserRegisterForm()
-
-
-    return render(request, 'users/register.html', {'form': form})
+        i_form = RegisterForm()
+    return render(request, 'users/register.html', {'form': form},{'i_form':i_form})
 
 @login_required
 def profile(request):

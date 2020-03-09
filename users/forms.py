@@ -12,9 +12,6 @@ class UserRegisterForm(UserCreationForm):
         model = User
         fields = ['username', 'email','first_name','last_name','password1', 'password2']
 class RegisterForm(forms.ModelForm):
-    #email = forms.EmailField
-    constituancy = forms.CharField(max_length=200)
-    #last_name = forms.CharField
 
     class Meta:
         model = Profile
