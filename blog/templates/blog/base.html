@@ -63,7 +63,7 @@
                  <a class=" nav-link" href="{% url 'profile' %}"><i class="fas fa-user"></i> Profile</a>
              </li>
              <li class="nav-item">
-                <a class="nav-link" href="{% url 'logout' %}"> <font color="blue"><small>Logout <i class="fas fa-sign-out-alt"></i></small></font></a>
+              <a class="nav-link" href="{% url 'logout' %}"> <font color="blue"> {{ user }}  <small> Logout <i class="fas fa-sign-out-alt"></i></small></font></a>
              </li>
           {% else %}
              <li class="nav-item">
