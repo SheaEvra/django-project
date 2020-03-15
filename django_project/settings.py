@@ -82,8 +82,12 @@ WSGI_APPLICATION = 'django_project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'nlcasiet',
+        'USER': 'nlcasiet',
+        'PASSWORD': 'txmvuR1hFcXOmf9vPbbTgau8L67hsjgs',
+        'HOST': 'drona.db.elephantsql.com' ,
+        'PORT': '5432'
     }
 }
 
